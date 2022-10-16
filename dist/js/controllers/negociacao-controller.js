@@ -9,6 +9,7 @@ export class NegociacaoController {
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
+        negociacao.data.setDate(12);
         this.negoaciacoes.adiciona(negociacao);
         this.negoaciacoes.lista();
         console.log(this.negoaciacoes.lista());
@@ -22,9 +23,9 @@ export class NegociacaoController {
         return new Negociacao(data, quantidade, valor);
     }
     limparFormulario() {
-        this.inputData.value = '';
-        this.inputQuantidade.value = '';
-        this.inputValor.value = '';
+        this.inputData.value = "";
+        this.inputQuantidade.value = "";
+        this.inputValor.value = "";
         this.inputData.focus();
     }
 }
