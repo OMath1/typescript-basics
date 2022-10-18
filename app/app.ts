@@ -1,5 +1,5 @@
 import { NegociacaoController } from "./controllers/negociacao-controller.js";
-import { NegociacoesView } from "./views/negoaciacoes-view.js";
+import { DiasDaSemana } from "./enum/dias-da-semana-enum.js";
 
 const controller = new NegociacaoController();
 const form = document.querySelector(".form");
@@ -8,6 +8,5 @@ form.addEventListener("submit", (event) => {
   controller.adiciona();
 });
 
-// const negociacoesView = new NegociacoesView();
-// const template = negociacoesView.template();
-// console.log(template);
+console.log(DiasDaSemana.DOMINGO);
+
