@@ -16,4 +16,12 @@ export class Negociacao {
     get volume() {
         return this.quantidade * this.valor;
     }
+    // Metodo estatico de classe
+    static criaDe(dataString, quantidadeString, valorString) {
+        const exp = /-/g;
+        const data = new Date(dataString.replace(exp, ","));
+        const quantidade = parseInt(quantidadeString);
+        const valor = parseInt(valorString);
+        return new Negociacao(data, quantidade, valor);
+    }
 }
