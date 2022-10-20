@@ -21,7 +21,8 @@ export class Negociacao {
     return this.quantidade * this.valor;
   }
 
-  // Metodo estatico de classe
+
+// Metodo estatico de classe
   public static criaDe(
     dataString: string,
     quantidadeString: string,

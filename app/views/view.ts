@@ -1,8 +1,14 @@
-export abstract class View<T>{
+export abstract class View<T> {
   protected elemento: HTMLElement;
 
   constructor(seletor: string) {
-    this.elemento = document.querySelector(seletor);
+    const elemento = document.querySelector(seletor);
+
+    if (elemento) {
+      this.elemento = elemento as HTMLElement;
+    } else {
+      throw new Error("Erro de tipo");
+    }
   }
 
   protected abstract template(model: T): string;

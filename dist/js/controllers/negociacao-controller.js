@@ -9,7 +9,7 @@ export class NegociacaoController {
         this.negociacoesView = new NegociacoesView("#negociacoesView");
         this.mensagemView = new MensagemView("#mensagemView");
         this.inputData = document.querySelector("#data");
-        this.inputQuantidade = document.querySelector("#quantidade");
+        this.inputQuantidade = (document.querySelector("#quantidade"));
         this.inputValor = document.querySelector("#valor");
         this.negociacoesView.update(this.negociacoes);
     }
@@ -24,7 +24,8 @@ export class NegociacaoController {
         this.atualizaView();
     }
     eDiaUtil(data) {
-        return data.getDay() > DiasDaSemana.DOMINGO && data.getDay() < DiasDaSemana.SABADO;
+        return (data.getDay() > DiasDaSemana.DOMINGO &&
+            data.getDay() < DiasDaSemana.SABADO);
     }
     limparFormulario() {
         this.inputData.value = "";
